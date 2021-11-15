@@ -12,3 +12,23 @@ body {
 
 @import "_header.scss";
 @import "_catalog.scss";
+
+.catalog {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 200px);
+  gap: 48px;
+
+  @media (max-width: 1023px) {
+    grid-template-columns: repeat(3, 200px);
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(2, 200px);
+  }
+
+  &__card {
+    margin: 0;
+    padding: 0;
+  }
+}
